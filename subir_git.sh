@@ -13,4 +13,3 @@ git commit -m "$nombre_commit"
 
 #Subirlo a git
 git push -u origin master
-echo "carlospdlt"
