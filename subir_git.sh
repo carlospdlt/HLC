@@ -8,8 +8,8 @@
 git add .
 
 #Nombre del commit
-read -e "nombre del coomit" nombre_commit
-git commit -m "$nombre_commit"
+git commit -m "$1"
 
 #Subirlo a git
 git push -u origin master
+echo "carlospdlt"
