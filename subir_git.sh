@@ -7,6 +7,7 @@
 #si introducimos argumento se subira el fichero como argumento si no se subiran todos
 if [ $# != 0 ]
    then
+	echo "se subira el fichero $1"
 	fichero=$1
 else
 	fichero=.
@@ -16,8 +17,7 @@ fi
 git add $fichero
 
 #Nombre del commit
-read -p "nombre del commit: " nombre
-git commit -m "nombre"
+git commit -m "$(date +%d/%b/%y)"
 
 #Subirlo a git
 git push -u origin master
