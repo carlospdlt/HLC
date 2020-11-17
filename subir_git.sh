@@ -8,7 +8,7 @@
 git add .
 
 #Nombre del commit
-read -e "nombre del commit" nombre
+read -p "nombre del commit" nombre
 git commit -m "nombre"
 
 #Subirlo a git
