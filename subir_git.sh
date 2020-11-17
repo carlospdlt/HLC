@@ -4,11 +4,19 @@
 #Fecha:17/nov/20
 #Autor: Carlos Piña
 
-#Seleccionamos todo
-git add .
+#si introducimos argumento se subira el fichero como argumento si no se subiran todos
+if [ $# != 0 ]
+   then
+	fichero=$1
+else
+	fichero=.
+fi
+
+#Seleccionamos los ficheros
+git add $fichero
 
 #Nombre del commit
-read -p "nombre del commit" nombre
+read -p "nombre del commit: " nombre
 git commit -m "nombre"
 
 #Subirlo a git
