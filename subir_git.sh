@@ -20,4 +20,4 @@ git add $fichero
 git commit -m "$(date +%d/%b/%y)"
 
 #Subirlo a git
-git push -u origin master
+echo "carlospdlt" | git push -u origin master
