@@ -4,16 +4,19 @@
 #Fecha:18/nov/20
 #Autor: Carlos Piña
 
-if [ -d $1 ]
-then
-   tam=$(du -sm $1 | cut -f 1)
-   echo "El directorio $i ocupa: $tam MB"
+for i in $@
+do
+     if [ -d $i ]
+      then
+	tam=$(du -sm $i | cut -f 1)
+	echo "El directorio $i ocupa: $tam MB"
 
-elif [ -f $1 ]
-then
-   tam=$(du -sm $1 | cut -f 1)
-   echo "El fichero $i ocupa: $tam MB"
+      elif [ -f $i ]
+	then
+	tam=$(du -sm $i | cut -f 1)
+	echo "El fichero $i ocupa: $tam MB"
 
-else
- echo "$i No exite o no es un tipo de argumento valido"
-fi
+      else
+	echo "$i no exite o no es un tipo de argumento valido"
+    fi
+done

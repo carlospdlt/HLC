@@ -10,6 +10,7 @@ if [ $# != 0 ]
 	echo "se subira el fichero $1"
 	fichero=$1
 else
+	echo "se subiran todos los ficheros"
 	fichero=.
 fi
 
